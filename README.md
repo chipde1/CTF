@@ -1,3 +1,9 @@
+## 🐞	주요 취약점
+- SQL Injection
+- XSS(Stored)
+- XOR의 속성을 이용한 취약점
+- sudoedit의 권한상승(CSV-2021-3156)
+
 # index.php
 ![image](https://github.com/user-attachments/assets/bbecfdd9-a778-4818-a175-6c23c1d8b482)
 - XSS(Stored)에 의해서 404가 띄워짐
