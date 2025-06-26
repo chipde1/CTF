@@ -18,3 +18,5 @@
 # sudoedit의 권한상승(CSV-2021-3156)
 - ServerID: cr0sss1tescr1pt9
 - password: df93ef64167b2334664ff59a5b8185f5
+![image](https://github.com/user-attachments/assets/39ca3bb8-c25f-497d-a4c8-40d73acf13e7)
+- Heap buffer overflow 취약점
