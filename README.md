@@ -1,8 +1,16 @@
 # index.php
 ![image](https://github.com/user-attachments/assets/bbecfdd9-a778-4818-a175-6c23c1d8b482)
 - XSS(Stored)에 의해서 404가 띄워짐
+![image](https://github.com/user-attachments/assets/871bbfc0-7b2c-448c-bfd4-ecd33137163a)
+- 원래의 index.php 화면이 보여지고
+- XOR 속성을 이용하여 계산하는 문제
 
 # add.php
+![image](https://github.com/user-attachments/assets/d7fa3495-1b2e-4080-a6d6-00f040a9ce9e)
+- <input type="hidden">을 통해 MySQL 쿼리 입력 폼을 숨김
+
+![image](https://github.com/user-attachments/assets/9354ada2-81d0-4ab5-a60e-49aee20411f4)
+- SQL Injection 공격
 # list.php
 ![image](https://github.com/user-attachments/assets/f7d046e7-3b59-4ff6-ba24-1963120dc257)
 - XSS 구문이 보이고 내용을 삭제하면 원래의 index.php가 보여짐
