@@ -27,4 +27,34 @@
 ![image](https://github.com/user-attachments/assets/39ca3bb8-c25f-497d-a4c8-40d73acf13e7)
 - Heap buffer overflow 취약점
 # XOR 계산
-![image](https://github.com/user-attachments/assets/2c6c3a65-b3fe-46d3-b3a2-21387045ab0a)
+XOR 변환기 http://kor.pe.kr/util/4/xor_convert.htm
+
+/list.php 에서 얻은 M1,M2,M3,M4 값과 /H10000.txt 에서 얻은 $H_{10000}$ 값으로 XOR 연산
+
+이 과정은 총 2가지로 풀 수 있다.
+
+1번 방법: 
+
+192.168.56.143/index.php에서 다음과 같은 식을 제공하였다. 이때 P=Password다. 
+
+$M_{1}=userID ⨁ K ⨁ H_{9999}$
+
+$M_{2}=serverID ⨁ K ⨁ H_{9999}$
+
+$M_{3}=H_{10000} ⨁ P$
+
+$M_{4}=H_{9999} ⨁ P$
+
+$P=H_{10000}⨁M_{3}$를 통해 $Password$=df93ef64167b2334664ff59a5b8185f5값을 구하면 $M_{4}$를 통해 $H_{9999}$를 구할 수 있다. $H_{9999}=M_{4}⨁P$ 이후 $M_{1}$을 이용하여 $K$를 구할 수 있다. 이때 $userID$는 위의 SQL Injection으로 찾아낸 $userID$ 중 하나씩 다 대입하면 $userID$=Ocean777Timewarp를 넣어서 계산하다보면 그럴듯한 $K$=secretpassword12값이 나온다. 그 다음 $M_{2}$에서 $serverID=M_{2}⨁H_{9999}$를 구할 수 있다. $serverID$=cr0sss1tescr1pt9 이제 서버의 ID와 Password를 전부 찾았다.
+
+2번 방법: 
+
+$M_{1}=userID ⨁ K ⨁ H_{9999}$
+
+$M_{2}=serverID ⨁ K ⨁ H_{9999}$
+
+$M_{3}=H_{10000} ⨁ P$
+
+$M_{4}=H_{9999} ⨁ P$
+
+$P=H_{10000}⨁M_{3}$를 통해 $Password$=df93ef64167b2334664ff59a5b8185f5를 구한 후 $M_{1}⨁M_{2}=userID⨁serverID$가 나오고 SQL Injection으로 찾아낸 $userID$를 하나씩 대입하면 $serverID$= cr0sss1tescr1pt9가 나온다. 이렇게 하면 굳이 $H_{9999}$값과 $K$값을 구하지 않아도 $serverID$값을 구할 수 있다.
