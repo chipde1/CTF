@@ -1,4 +1,4 @@
-## 🐞	주요 취약점
+# 🐞	주요 취약점
 - SQL Injection
 - XSS(Stored)
 - XOR의 속성을 이용한 취약점
