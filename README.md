@@ -16,3 +16,5 @@
 - XSS 구문이 보이고 내용을 삭제하면 원래의 index.php가 보여짐
 - M1, M2, M3, M4에 대한 내용이 적혀있음
 # sudoedit의 권한상승(CSV-2021-3156)
+- ServerID: cr0sss1tescr1pt9
+- password: df93ef64167b2334664ff59a5b8185f5
