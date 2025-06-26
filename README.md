@@ -20,3 +20,5 @@
 - password: df93ef64167b2334664ff59a5b8185f5
 ![image](https://github.com/user-attachments/assets/39ca3bb8-c25f-497d-a4c8-40d73acf13e7)
 - Heap buffer overflow 취약점
+# XOR 계산
+![image](https://github.com/user-attachments/assets/2c6c3a65-b3fe-46d3-b3a2-21387045ab0a)
